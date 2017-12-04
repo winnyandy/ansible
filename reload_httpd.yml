@@ -1,0 +1,10 @@
+---
+
+- name: reload httpd
+  hosts: all
+  tasks:
+        - name: Reload a httpd service
+          systemd:
+                name: httpd
+                state: reloaded
+                

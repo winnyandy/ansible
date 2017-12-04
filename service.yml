@@ -1,0 +1,9 @@
+---
+- name: Restart Network Service
+  hosts: centos7
+  remote_user: root
+  tasks:
+        - name: Restart Network Service
+          service:
+                name: network
+                state: restarted

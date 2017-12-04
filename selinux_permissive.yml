@@ -1,0 +1,9 @@
+---
+- name: Set Permissive SELinux
+  hosts: centos7
+  remote_user: root
+  tasks:
+        - name: Permissive SELinux
+          selinux:
+                policy: targeted
+                state: permissive

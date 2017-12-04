@@ -1,0 +1,13 @@
+---
+
+- name: find
+  hosts: centos7
+  remote_user: root
+  tasks:
+        - name: find
+          command: ls /root
+          register: result
+
+        - name: print stdout
+          debug:
+                msg: "{{ result.stdout_lines }}"

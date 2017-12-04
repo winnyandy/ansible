@@ -1,0 +1,8 @@
+---
+
+- name: Copy httpd.conf file to /root
+  hosts: centos7
+  remote_user: root
+  tasks:
+        - name: Copy httpd.conf file
+          shell: cp /etc/httpd/conf/httpd.conf /root

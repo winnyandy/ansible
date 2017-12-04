@@ -1,0 +1,10 @@
+---
+- name: Virt
+  hosts: centos7
+  remote_user: root
+  tasks:
+        - name: Running VM
+          virt:
+                name: vm1
+                state: running
+                xml: /vm_data/xml/vm1.xml

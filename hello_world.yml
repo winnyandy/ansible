@@ -1,0 +1,24 @@
+---
+
+- name: say 'hello world'
+  hosts: all
+  tasks:
+
+        - name: echo 'hello world'
+          command: echo 'hello world'
+          register: result
+
+        - name: print stdout
+          debug:
+                msg: "{{ result.stdout }}"
+
+        - name: install the latest version of Apache
+          yum:
+                name: httpd
+                state: latest
+
+        - name: Start a httpd service
+          systemd:
+                name: httpd
+                state: started
+                enabled: yes

@@ -1,0 +1,10 @@
+---
+
+- name: Stop httpd
+  hosts: all
+  tasks:
+        - name: Stop a httpd service
+          systemd:
+                name: httpd
+                state: stopped
+                

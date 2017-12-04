@@ -1,0 +1,10 @@
+---
+
+- name: Copy anaconda-ks.cfg file to /mnt
+  hosts: centos7
+  remote_user: root
+  tasks:
+        - name: Copy anaconda-ks.cfg file
+          copy:
+                src: /root/anaconda-ks.cfg
+                dest: /mnt

@@ -1,0 +1,9 @@
+---
+- name: Set Enforcing SELinux
+  hosts: centos7
+  remote_user: root
+  tasks:
+        - name: Enforcing SELinux
+          selinux:
+                policy: targeted
+                state: enforcing
